@@ -1,0 +1,35 @@
+service: test-lamda-images
+
+provider:
+  name: aws
+  runtime: nodejs18.x # or the Node.js runtime of your choice
+  region: ap-south-1 # Change to your preferred AWS region
+
+functions:
+  imageUpload:
+    handler: index.uploadImage
+    events:
+      - http:
+          path: upload
+          method: post
+  GetImage:
+    handler: index.getImage
+    events:
+      - http:
+          path: getImage
+          method: get
+  AllImages:
+    handler: index.allImages
+    events:
+      - http:
+          path: allImages
+          method: get
+          
+# plugins:
+#   - serverless-offline # Enable the Serverless Offline plugin
+
+custom:
+  # bucketName: testbucket-08 # Replace with your S3 bucket name
+  serverless-offline : 
+    host: 192.168.1.14
+

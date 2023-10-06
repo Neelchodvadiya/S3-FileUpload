@@ -1,0 +1,19 @@
+{
+  "name": "testfunction-2ae73689-5701-4c9d-84f3-8374eafca91e",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1471.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "serverless-offline": "^13.2.0"
+  }
+}
